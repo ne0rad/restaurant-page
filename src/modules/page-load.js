@@ -1,6 +1,7 @@
 import '../styles/style.css';
+import tomatoLogo from '../images/tomato-logo.png';
 
-const MENU_ITEMS = ['Home','Menu','About','Contacts'];
+const MENU_ITEMS = ['Home', 'Menu', 'About', 'Contacts'];
 
 export default function pageLoad() {
 
@@ -11,13 +12,36 @@ export default function pageLoad() {
     let navBar = document.createElement('div');
     navBar.classList.add('nav-bar');
 
-    // Create each item in the navigation bar
+
+    // Create logo box div
+    let logoBox = document.createElement('div');
+    logoBox.classList.add('nav-items-box');
+    navBar.appendChild(logoBox);
+
+    // Add image to logo box
+    const logo = new Image();
+    logo.src = tomatoLogo;
+    logo.id = 'tomato-logo';
+    logoBox.appendChild(logo);
+    
+    let logoText = document.createElement('span');
+    logoText.classList.add('big-text');
+    logoText.textContent = "Tomato Bar";
+    logoBox.appendChild(logoText);
+
+
+    // Create box for navigation bar items
+    let navItemsBox = document.createElement('div');
+    navItemsBox.classList.add('nav-items-box');
+    navBar.appendChild(navItemsBox);
+
+    // Create each item in the navigation items box
     MENU_ITEMS.forEach(item => {
 
         let navItem = document.createElement('div');
         navItem.textContent = item;
         navItem.classList.add('nav-item')
-        navBar.appendChild(navItem);
+        navItemsBox.appendChild(navItem);
 
     });
 
