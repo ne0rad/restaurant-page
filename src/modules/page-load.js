@@ -5,8 +5,10 @@ const MENU_ITEMS = ['Home', 'Menu', 'About', 'Contacts'];
 
 export default function pageLoad() {
 
-    // Get the main div
-    let content = document.getElementById('content');
+    // Generate main content div
+    let content = document.createElement('div');
+    content.id = 'content';
+    document.getElementsByTagName('body')[0].appendChild(content);
 
     // Create a navigation bar, apply styles etc.
     let navBar = document.createElement('div');
@@ -23,7 +25,7 @@ export default function pageLoad() {
     logo.src = tomatoLogo;
     logo.id = 'tomato-logo';
     logoBox.appendChild(logo);
-    
+
     let logoText = document.createElement('span');
     logoText.classList.add('big-text');
     logoText.textContent = "Tomato Bar";
