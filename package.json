@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/ne0rad/restaurant-page/issues"
   },
-  "homepage": "https://github.com/ne0rad/restaurant-page#readme"
+  "homepage": "https://github.com/ne0rad/restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.56.1",
+    "webpack-cli": "^4.8.0"
+  }
 }
