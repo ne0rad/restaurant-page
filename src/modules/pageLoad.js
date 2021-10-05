@@ -3,7 +3,7 @@ import tomatoLogo from '../images/tomato-logo.png';
 
 const MENU_ITEMS = ['Home', 'Menu', 'Contacts'];
 
-export default function pageLoad() {
+function pageLoad() {
 
     // Generate main content div
     let content = document.createElement('div');
@@ -42,11 +42,26 @@ export default function pageLoad() {
 
         let navItem = document.createElement('div');
         navItem.textContent = item;
-        navItem.classList.add('nav-item')
+        navItem.classList.add('nav-item');
+        navItem.id = "nav" + item;
+        navItem.addEventListener('click', () => changeTab('nav' + item));
         navItemsBox.appendChild(navItem);
 
     });
 
+    function changeTab(tab) {
+        document.getElementById(active_tab).classList.remove('active-tab');
+        document.getElementById(tab).classList.add('active-tab');
+        active_tab = tab;
+    }
+
+    let active_tab = 'navHome';
+    setTimeout(() => {
+        changeTab('navHome');
+    }, 10);
 
     content.appendChild(navBar);
 }
+
+
+export { pageLoad };
