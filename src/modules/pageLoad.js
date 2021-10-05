@@ -1,7 +1,7 @@
 import '../styles/style.css';
 import tomatoLogo from '../images/tomato-logo.png';
 
-const MENU_ITEMS = ['Home', 'Menu', 'About', 'Contacts'];
+const MENU_ITEMS = ['Home', 'Menu', 'Contacts'];
 
 export default function pageLoad() {
 
@@ -17,7 +17,7 @@ export default function pageLoad() {
 
     // Create logo box div
     let logoBox = document.createElement('div');
-    logoBox.classList.add('nav-items-box');
+    logoBox.classList.add('logo-box');
     navBar.appendChild(logoBox);
 
     // Add image to logo box
