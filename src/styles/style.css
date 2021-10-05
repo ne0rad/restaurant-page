@@ -14,6 +14,12 @@ body {
   background-color: var(--background);
 }
 
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #tomato-logo {
   width: 60px;
   height: auto;
@@ -24,13 +30,15 @@ body {
   display: flex;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  border-radius: 0 0 10px 10px;
+  width: 96%;
   height: 80px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: var(--foreground);
   padding: 0 10px 0 10px;
+  box-shadow: 0 0 3px 1px black;
+  user-select: none;
 }
 
 .nav-items-box {
