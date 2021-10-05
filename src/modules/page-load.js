@@ -9,12 +9,18 @@ export default function pageLoad() {
 
     // Create a navigation bar, apply styles etc.
     let navBar = document.createElement('div');
-    navBar.classList.add('menu');
+    navBar.classList.add('nav-bar');
 
     // Create each item in the navigation bar
-    let navItem = document.createElement('div');
-    navItem.textContent = 'Home';
+    MENU_ITEMS.forEach(item => {
 
-    navBar.appendChild(navItem);
+        let navItem = document.createElement('div');
+        navItem.textContent = item;
+        navItem.classList.add('nav-item')
+        navBar.appendChild(navItem);
+
+    });
+
+
     content.appendChild(navBar);
 }
