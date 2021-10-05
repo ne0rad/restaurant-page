@@ -1,0 +1,19 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "Restaurant page website for The Odin Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ne0rad/restaurant-page.git"
+  },
+  "author": "ne0rad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ne0rad/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/ne0rad/restaurant-page#readme"
+}
