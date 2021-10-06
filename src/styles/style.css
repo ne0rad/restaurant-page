@@ -126,4 +126,7 @@ body {
   .logo-box {
     display: none;
   }
+  .nav-bar {
+    justify-content: center;
+  }
 }
