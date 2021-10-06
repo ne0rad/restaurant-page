@@ -1,14 +1,9 @@
 import '../styles/style.css';
 import tomatoLogo from '../images/tomato-logo.png';
+import { changeTab } from './changeTab';
 
 const MENU_ITEMS = ['Home', 'Menu', 'Contacts'];
-let active_tab = 'navHome';
 
-function changeTab(tab) {
-    document.getElementById(active_tab).classList.remove('active-tab');
-    document.getElementById(tab).classList.add('active-tab');
-    active_tab = tab;
-}
 
 function pageLoad() {
 
@@ -56,10 +51,25 @@ function pageLoad() {
 
     });
 
-    // Sets active tab only after page has been generated
-    setTimeout(() => {
-        changeTab(active_tab);
-    }, 1);
+    // Create footer element
+    let footer = document.createElement('div');
+    footer.classList.add('footer');
+    content.appendChild(footer);
+
+    // Create items inside footer div
+    let footerItems = document.createElement('div');
+    footerItems.classList.add('footer-items')
+    footerItems.textContent = "Made by ne0rad";
+    footer.appendChild(footerItems);
+
+
+    // Create element where page content would be displayed
+    let pageContent = document.createElement('div');
+    pageContent.classList.add('page-content');
+    pageContent.id = 'pageContent';
+    content.appendChild(pageContent);
+
+
 
     content.appendChild(navBar);
 }
