@@ -2,6 +2,13 @@ import '../styles/style.css';
 import tomatoLogo from '../images/tomato-logo.png';
 
 const MENU_ITEMS = ['Home', 'Menu', 'Contacts'];
+let active_tab = 'navHome';
+
+function changeTab(tab) {
+    document.getElementById(active_tab).classList.remove('active-tab');
+    document.getElementById(tab).classList.add('active-tab');
+    active_tab = tab;
+}
 
 function pageLoad() {
 
@@ -49,16 +56,10 @@ function pageLoad() {
 
     });
 
-    function changeTab(tab) {
-        document.getElementById(active_tab).classList.remove('active-tab');
-        document.getElementById(tab).classList.add('active-tab');
-        active_tab = tab;
-    }
-
-    let active_tab = 'navHome';
+    // Sets active tab only after page has been generated
     setTimeout(() => {
-        changeTab('navHome');
-    }, 10);
+        changeTab(active_tab);
+    }, 1);
 
     content.appendChild(navBar);
 }
