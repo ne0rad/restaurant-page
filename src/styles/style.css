@@ -17,7 +17,7 @@ body {
 #content {
   display: flex;
   justify-content: center;
-  min-width: 500px;
+  min-width: 310px;
 }
 
 #tomato-logo {
@@ -39,7 +39,7 @@ body {
   padding: 0 10px 0 10px;
   box-shadow: 0 0 3px 1px black;
   user-select: none;
-  min-width: 500px;
+  min-width: 310px;
 }
 
 .nav-items-box {
@@ -95,7 +95,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--foreground);
-  min-width: 500px;
+  min-width: 310px;
   user-select: none;
 }
 
@@ -120,4 +120,10 @@ body {
   color: var(--text);
   font-size: 50px;
   background-color: var(--background);
+}
+
+@media only screen and (max-width: 490px) {
+  .logo-box {
+    display: none;
+  }
 }
