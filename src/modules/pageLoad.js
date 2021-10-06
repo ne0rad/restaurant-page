@@ -15,7 +15,7 @@ function pageLoad() {
     // Create a navigation bar, apply styles etc.
     let navBar = document.createElement('div');
     navBar.classList.add('nav-bar');
-
+    content.appendChild(navBar);
 
     // Create logo box div
     let logoBox = document.createElement('div');
@@ -71,7 +71,8 @@ function pageLoad() {
 
 
 
-    content.appendChild(navBar);
+
+    changeTab('navHome'); // Set active tab as Home
 }
 
 
