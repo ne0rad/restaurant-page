@@ -1,3 +1,5 @@
+import homeTomato from '../images/home-tomato.png';
+
 function homeLoad() {
 
     let pageContent = document.getElementById('pageContent');
@@ -6,7 +8,7 @@ function homeLoad() {
     function addText(title, text) {
         // Function to add text with a title to homepage
         let titleText = document.createElement('div');
-        titleText.classList.add('title-text');
+        titleText.classList.add('text-title');
         titleText.textContent = title;
         homePage.appendChild(titleText);
 
@@ -16,12 +18,22 @@ function homeLoad() {
         homePage.appendChild(pageText);
     }
 
+    // Create main home-page div
     let homePage = document.createElement('div');
     homePage.classList.add('home-page');
     pageContent.appendChild(homePage);
 
     addText('Welcome to our restaurant!', lorem);
-    addText('Second title', lorem);
+
+    // Add image
+    let homeImage = new Image();
+    homeImage.src = homeTomato;
+    homeImage.classList.add('page-image');
+    homePage.appendChild(homeImage);
+
+    addText('Our tomatoes are the best!', lorem);
+
+    addText('Brief history of Tomato Bar', lorem);
 
 }
 

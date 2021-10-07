@@ -28,6 +28,7 @@ function pageLoad() {
     logo.id = 'tomato-logo';
     logoBox.appendChild(logo);
 
+    // Create text element next to the logo
     let logoText = document.createElement('span');
     logoText.classList.add('big-text');
     logoText.textContent = "Tomato Bar";
@@ -59,8 +60,16 @@ function pageLoad() {
     // Create items inside footer div
     let footerItems = document.createElement('div');
     footerItems.classList.add('footer-items')
-    footerItems.textContent = "Made by ne0rad";
+    footerItems.textContent = "Made by ";
     footer.appendChild(footerItems);
+
+    // Add link to a footer item
+    let footerLink = document.createElement('a');
+    footerLink.href = "https://github.com/ne0rad/restaurant-page";
+    footerLink.textContent = "ne0rad";
+    footerLink.target = "_blank";
+    footerLink.classList.add('text-link');
+    footerItems.appendChild(footerLink);
 
 
     // Create element where page content would be displayed
@@ -68,9 +77,6 @@ function pageLoad() {
     pageContent.classList.add('page-content');
     pageContent.id = 'pageContent';
     content.appendChild(pageContent);
-
-
-
 
     changeTab('navHome'); // Set active tab as Home
 }
